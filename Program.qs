@@ -1,25 +1,15 @@
-namespace ExploringSuperposition {
+namespace ExploringInterference {
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Diagnostics;
     open Microsoft.Quantum.Measurement;
-    open Microsoft.Quantum.Math;
-    open Microsoft.Quantum.Convert;
 
     @EntryPoint()
-    operation GenerateUniformState() : Int {
-        use qubits = Qubit[3];
-        ApplyToEach(H, qubits);
-        Message("The qubit register in a uniform superposition: ");
+    operation TestInterference2() : Unit {
+        use q = Qubit();
+        X(q);
+        H(q);
         DumpMachine();
-        mutable results = [];
-        for q in qubits {
-            Message(" ");
-            set results += [M(q)];
-            DumpMachine();
-        }
-        Message(" ");
-        Message("Your random number is: ");
-        return BoolArrayAsInt(ResultArrayAsBoolArray(results));
+        Reset(q);
     }
 }
