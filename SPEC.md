@@ -4,6 +4,23 @@ Reverse-engineered from commit `92d511e` on 2026-11-18. It describes what the
 code does, not what it was meant to do. Documentation hub:
 [docs/README.md](docs/README.md).
 
+<!-- jira-sync:start -->
+Jira: KAN-116
+
+## Tasks
+
+This list is one ticket in Jira project KAN, [KAN-116](https://igorsvolohovs.atlassian.net/browse/KAN-116). Each line is a checkbox there: tick it in Jira and the sync ticks it here; add a checkbox there and it is appended here. Done items are the features described in section 3; open items are what the project declares but the code does not do yet.
+
+- [x] Qubit preparation (section 3.1) <!-- spec-qubit-preparation -->
+- [x] Bell-state experiment (section 3.2) <!-- spec-bell-state-experiment -->
+- [x] Build (section 3.3) <!-- spec-build -->
+- [x] Repository tooling (section 3.4) <!-- spec-repository-tooling -->
+- [ ] Commit `b97ad6e` is titled "pin ruff and pytest", but only ruff's version is (declared, not implemented) <!-- spec-commit-b97ad6e-is-titled-pin-ruff-and-pytest-but-o -->
+- [ ] `recipe.ps1 test` runs pytest and ruff over `.claude` (`recipe.ps1:45-53`); (declared, not implemented) <!-- spec-recipe-ps1-test-runs-pytest-and-ruff-over-claude-r -->
+- [ ] `Program.qs:34` and `Program.qs:36` carry a commented-out counter line and a (declared, not implemented) <!-- spec-program-qs-34-and-program-qs-36-carry-a-commented- -->
+
+<!-- jira-sync:end -->
+
 ## 1. Purpose and scope
 
 The repository holds one Q# exercise that prepares a Bell state on two qubits,
